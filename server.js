@@ -4,9 +4,7 @@ const ShortUrl = require('./models/shortUrl');
 const app = express();
 require('dotenv').config();
 
-// mongodb://localhost/urlShortener
-
-mongoose.connect(process.env.MONGODB_DATABASE, {
+mongoose.connect(mongodb://localhost/urlShortener, {
   useNewUrlParser: true, useUnifiedTopology: true
 });
 
