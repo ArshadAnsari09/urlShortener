@@ -4,7 +4,7 @@ const ShortUrl = require('./models/shortUrl');
 const app = express();
 require('dotenv').config();
 
-mongoose.connect(mongodb://localhost/urlShortener, {
+mongoose.connect("mongodb://localhost/urlShortener", {
   useNewUrlParser: true, useUnifiedTopology: true
 });
 
@@ -17,7 +17,7 @@ app.get('/', async (req, res) => {
 });
 
 app.post('/shortUrls', async (req, res) => {
-  await ShortUrl.create({ full: req.body.fullUrl });
+  await ShortUrl.create({ full: req.body.fullUrl })
 
   res.redirect('/');
 });
